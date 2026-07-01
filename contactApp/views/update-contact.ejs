@@ -1,0 +1,56 @@
+
+<%- include('./partial/header') %>
+
+<div class="card shadow">
+    <div class="card-header bg-warning">
+        <h4>Edit Contact</h4>
+    </div>
+
+    <div class="card-body">
+
+        <form action="/update-contact/<%= contact._id %>" method="POST">
+
+            <div class="mb-3">
+                <label>Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    value="<%= contact.name %>"
+                    class="form-control"
+                    required
+                >
+            </div>
+
+            <div class="mb-3">
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    value="<%= contact.email %>"
+                    class="form-control"
+                    required
+                >
+            </div>
+
+            <div class="mb-3">
+                <label>Phone</label>
+                <input
+                    type="text"
+                    name="phone"
+                    value="<%= contact.phone %>"
+                    class="form-control"
+                    required
+                >
+            </div>
+
+            <button class="btn btn-primary">
+                Update Contact
+            </button>
+
+        </form>
+
+    </div>
+</div>
+
+<%- include('./partial/footer') %>
+

@@ -1,0 +1,64 @@
+
+<%- include('./partial/header') %>
+<div class="card shadow">
+    <div class="card-header bg-success text-white">
+        <h4>Contact Details</h4>
+    </div>
+
+    <div class="card-body">
+
+        <form  method="POST">
+
+            <div class="mb-3">
+                <h3>Name</h3>
+                <p><%= contact.name %></p>
+                    <!-- <input
+                        type="text"
+                        name="name"
+                        value="<%= contact.name %>"
+                        class="form-control"
+                        required
+                    > -->
+            </div>
+
+            <div class="mb-3">
+                <h3>Email</h3>
+                <p><%= contact.email %></p>
+                <!-- <input
+                    type="email"
+                    name="email"
+                    value="<%= contact.email %>"
+                    class="form-control"
+                    required
+                > -->
+            </div>
+
+            <div class="mb-3">
+                <h3>Phone</h3>
+                <p><%= contact.phone %></p>
+                <!-- <input
+                    type="text"
+                    name="phone" 
+                    value="<%= contact.phone %>"
+                    class="form-control"
+                    required
+                >
+                -->
+            </div>
+
+            <button class="btn btn-success">
+                Save
+            </button>
+              <a href="/delete-contact/<%= contact.id %>" class="btn btn-danger">
+                Delete
+            </a>
+              <a href="/" class="btn btn-secondary">
+                Cancel
+            </a>
+        </form>
+
+    </div>
+</div>
+
+<%- include('./partial/footer') %>
+
