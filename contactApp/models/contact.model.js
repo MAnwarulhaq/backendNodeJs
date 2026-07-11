@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const contactSchema= mongoose.Schema({
     name:{
         type:String,
@@ -19,4 +19,6 @@ const contactSchema= mongoose.Schema({
 
 const contact = mongoose.model("contact",contactSchema)
 
-module.exports = contact
+// module.exports = contact
+
+export default contact
